@@ -2,15 +2,9 @@ class Solution {
 public:
     int findNumbers(vector<int>& nums) {
         int even=0;
-        for(int i=0;i<nums.size();i++){
-            int count =0;
-            int j=nums[i];
-            while(j!=0){
-                int num = j % 10;
-                j /= 10;
-                count++;
-            }
-            if(count % 2 == 0){
+        for(int num : nums){
+            int digits = (num == 0) ? 1 : floor(log10(num)+1); 
+            if(digits % 2 == 0){
                 even++;
             }
         }
