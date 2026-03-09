@@ -7,10 +7,9 @@ int main(){
     cin>>n;
 
 
-     for(int i=1,k=1;i<=n;i++){
-        for(int j=0;j<i;j++){
-            cout<<k<<" ";
-            k++;
+     for(int i=1;i<=n;i++){
+        for(int j=0;j<=n-i;j++){
+            cout<<(char)('A'+j)<<" ";
         }
        
         cout<<endl;
