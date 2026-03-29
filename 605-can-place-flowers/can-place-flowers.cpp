@@ -4,11 +4,11 @@ public:
         if(n==0) return true;
         int z = flowerbed.size()-1;
         if(flowerbed.size()==1 && flowerbed[0]==0){
-            flowerbed[0]==1;
+            flowerbed[0]=1;
             n--;
         }
         if(flowerbed.size()==2 && flowerbed[0]==0 && flowerbed[1]==0){
-            flowerbed[0]==1;
+            flowerbed[0]=1;
             n--;
         }
         for(int i=1;i<flowerbed.size()-1;i++){
