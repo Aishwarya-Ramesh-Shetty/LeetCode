@@ -6,8 +6,9 @@ public:
 
         for(int i=0;i<nums.size();i++){
             int num = target - nums[i];
-            if(mp.count(num) ){
-                return {i,mp[num]};
+            auto it = mp.find(num);
+            if(it != mp.end()){
+                return {i,it->second};
             }
             mp[nums[i]]=i;
         }
