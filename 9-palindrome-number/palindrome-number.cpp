@@ -1,18 +1,30 @@
+
+
 class Solution {
 public:
+
+     long long RecursionPalindrome(int x, long long val){
+        if(x == 0){
+            return val;
+        }
+
+         long long digit = x % 10;
+        x = x / 10;
+        val = val * 10 + digit;
+        return RecursionPalindrome(x, val);
+    }
+
+
     bool isPalindrome(int x) {
         if(x < 0) return false;
-        if(x == 0) return true;
-        int copy = x;
-        double num;
-        while(copy != 0){
-            int digit = copy % 10;
-            copy /= 10;
-            num = num * 10 + digit;
-        }
-        if(num == x){
+        double val = 0;
+         long long copy = x;
+         long long num = RecursionPalindrome(x,val);
+        if(num == copy){
             return true;
         }
         return false;
     }
 };
+
+
